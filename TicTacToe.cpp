@@ -63,6 +63,7 @@ void PlaceMarker(Board &b, int player_num){
     
 }
 
+
 int main(){
     Board *b = new Board();
     CreateBoard(*b);
