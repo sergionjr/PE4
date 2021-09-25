@@ -1,0 +1,48 @@
+~ ~ ~ 
+~ ~ ~ 
+~ ~ ~ 
+Player 1 Turn
+Select a row and column to place your marker.
+Row: 1
+Column: 1
+
+O ~ ~ 
+~ ~ ~ 
+~ ~ ~ 
+Player 2 Turn
+Select a row and column to place your marker.
+Row: 1
+Column: 2
+
+O X ~ 
+~ ~ ~ 
+~ ~ ~ 
+Player 1 Turn
+Select a row and column to place your marker.
+Row: 3
+Column: 3
+
+O X ~ 
+~ ~ ~ 
+~ ~ O 
+Player 2 Turn
+Select a row and column to place your marker.
+Row: 2
+Column: 1
+
+O X ~ 
+X ~ ~ 
+~ ~ O 
+Player 1 Turn
+Select a row and column to place your marker.
+Row: 2
+Column: 2
+
+O X ~ 
+X O ~ 
+~ ~ O 
+Player 2 Turn
+Select a row and column to place your marker.
+Row: 1
+Column: 3
+Game Over.
