@@ -57,6 +57,13 @@ void GetPlayerChoice(Board &b){
     }
 }
 
+void PlaceMarker(Board &b, int player_num){
+    if (player_num == 1){b.square[b.row][b.col] = SquareType::0;}
+    else if (player_num == 2){b.square[b.row][b.col] = Square
+    
+}
+
+
 int main(){
     Board *b = new Board();
     CreateBoard(*b);
