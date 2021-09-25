@@ -13,23 +13,25 @@ struct Board{
     int col;        
 };
 
-void CreateBoard (Board &board){
+
+
+void CreateBoard (Board &b){
     for (int i = 0; i < 3; i++){
         for (int j = 0; j < 3; j++){
-            board.square[i][j] = SquareClass::Empty;
+            b.square[i][j] = SquareClass::Empty;
             
         }
     }
 }
 
 
+
 void DisplayBoard(const Board &b){
-    std::cout << "   1  2  3" << std::endl; 
     for (int i = 0; i < 3; i++){
         for (int j = 0; j < 3; j++){
-            if (board[i][j] == SquareClass::Empty){std::cout<<"~ ";}
-            if (board[i][j] == SquareClass::X){std::cout<<"X ";}
-            if (board[i][j] == SquareClass::O){std::cout<<"O ";}
+            if (b.square[i][j] == SquareClass::Empty){std::cout<<"~ ";}
+            if (b.square[i][j] == SquareClass::X){std::cout<<"X ";}
+            if (b.square[i][j] == SquareClass::O){std::cout<<"O ";}
         }
         std::cout << std::endl;
     }
@@ -58,16 +60,26 @@ void GetPlayerChoice(Board &b){
 }
 
 void PlaceMarker(Board &b, int player_num){
-    if (player_num == 1){b.square[b.row][b.col] = SquareType::0;}
-    else if (player_num == 2){b.square[b.row][b.col] = Square
-    
+    if (player_num == 1){b.square[b.row][b.col] = SquareClass::O;}
+    else if (player_num == 2){b.square[b.row][b.col] = SquareClass::X;}
 }
 
-
 int main(){
+    int player = 0;
     Board *b = new Board();
     CreateBoard(*b);
+    for (int i = 0; i < 9; i++){
+        player++;
+        if (player == 3){player = 1;}
+        DisplayBoard(*b);
+        std::cout << "Player " << player << " Turn" << std::endl;
+        GetPlayerChoice(*b);
+        std::cout << std::endl;
+        PlaceMarker(*b, player);
+    }
     DisplayBoard(*b);
+    std::cout << "Game Over." << std::endl;
+    
     
     
 }
